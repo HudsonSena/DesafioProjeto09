@@ -18,7 +18,7 @@ Project building from "Rocktseat" classes.
 - SVG style edits controls and cards
 - scripts(functions, events, constant, variables, window, if, else)
 - audios aplications
-- input rane for volume in cards
+- input range for volume in cards
 - light and dark modes
 - export and import css style
 - factoring method
