@@ -1,6 +1,6 @@
 # "Focus Timer Dark Mode - Pomodoro"
 
-![preview](./focusTimerDarkMode.png)
+![preview](./focusTimerDarkMode.png) ![preview](./focusTimerLightMode.png)
 
 Project building from "Rocktseat" classes.
 
