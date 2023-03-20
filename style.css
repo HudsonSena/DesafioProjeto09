@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --textButton-color: #323238;
+    --bg-songButton-color: #E1E1E6;
+    --bg-selectSongButton-color: #02799D;
+    --bg-dark-mode-color: #121214;
+
+    font-size: 62.5%;
+}
+
+body {
+    width: 82rem;
+    height: 100vh;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 19rem;
+
+    padding: .5rem;
+}
+
+.timerControls {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.6rem;
+    line-height: 14.8rem;
+    text-transform: uppercase;
+
+    color: var(--textButton-color);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.timer {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards div:nth-child(1) {
+    grid-area: A;
+}
+.cards div:nth-child(2) {
+    grid-area: B;
+}
+.cards div:nth-child(3) {
+    grid-area: C;
+}
+.cards div:nth-child(4) {
+    grid-area: D;
+}
+
+.cards {
+    display: grid;
+    grid-template-areas: "A B" "C D";
+    gap: 3.2rem;
+}
+
+.cardCard {
+    width: 14.0rem;
+    height: 17.0rem;
+}
+
+.blueButton svg path, .blueButton.cBlack svg path {
+    fill: var(--bg-selectSongButton-color);
+}
+
+.blue2 svg path:nth-child(1), .blue2.cardBlack svg path:nth-child(1) {
+    fill: var(--bg-selectSongButton-color);
+}
+
+.blue2 input::-webkit-slider-thumb, .blue2 input::-webkit-slider-runnable-track {
+    background: var(--bg-songButton-color);
+}
+
+.blue2 svg path:nth-child(2) {
+    fill: white;
+}
+
+@media (max-width: 1000px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+}
+
+/*--- Input Volume/Volume ---*/
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem
+}
+
+input {
+    -webkit-appearance: none;
+    border: none;
+    width: 9rem;
+    position: relative;
+    left: 2.4rem;
+    bottom: 3rem;
+}
+
+input::-webkit-slider-runnable-track {
+    width: auto;
+    height: 4px;
+    background: var(--textButton-color);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--textButton-color);
+    margin-top: -6px    
+}
+
+/*--- Button Dark Mode and White Mode---*/
+.btnDarkMode, .btnLightMode {
+    position: absolute;
+    right: 12rem;
+    top: 10rem;
+}
+
+/*--- Button Dark mode/Backgroud Dark mode ---*/
+.bgBlack {
+    background-color: var(--bg-dark-mode-color);
+}
+
+.hide {
+    display: none;
+    opacity: 0;
+}
+
+/*--- Timer Dark mode---*/
+.tblack span {
+    color: white;
+}
+
+/*--- Controls Dark Mode/Controles Dark Mode---*/
+.cBlack svg path {
+    fill: var(--bg-songButton-color);
+}
+
+/*---Cards Dark Mode---*/
+.cardBlack svg path:nth-child(1) {
+    fill: var(--textButton-color);
+}
+.cardBlack svg path:nth-child(2) {
+    fill: var(--bg-songButton-color);
+}
+
+/*---Input Dark Mode---*/
+.iBlack input::-webkit-slider-thumb, .iBlack input::-webkit-slider-runnable-track {
+    background: var(--bg-songButton-color);
+}
